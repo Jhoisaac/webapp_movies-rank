@@ -7,7 +7,7 @@ import 'rxjs/RX';
 @Injectable()
 export class ActoresService {
 
-  urlActor: string = 'http://35.194.35.240/api/actores';
+  urlActor: string = 'http://35.194.35.240/api';
 
   constructor(private http: Http) { }
 
@@ -24,7 +24,7 @@ export class ActoresService {
   getActor(indice: string) {
     // let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
     // let options = new RequestOptions({ headers: headers });
-    let urls = `${this.urlActor}/actor/${indice}`;
+    let urls = `${this.urlActor}/${indice}`;
 
     return this.http.get(urls)
       .map(
