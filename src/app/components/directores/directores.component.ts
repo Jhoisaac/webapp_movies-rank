@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Director } from '../../interfaces/directores.interface';
-import { ActoresService } from '../../services/actores.service';
+import { DirectoresService } from '../../services/directores.service';
 
 @Component({
   selector: 'app-directores',
@@ -9,9 +9,9 @@ import { ActoresService } from '../../services/actores.service';
 })
 export class DirectoresComponent implements OnInit {
   actor: Director[] = [];
-  constructor(private actorService: ActoresService) {
+  constructor(private directorService: DirectoresService) {
 
-    this.actorService.consultarActor()
+    this.directorService.consultarDirector()
       .subscribe(
         resultado => {
           this.actor = resultado;

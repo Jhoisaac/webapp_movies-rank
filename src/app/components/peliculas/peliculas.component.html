@@ -1,3 +1,15 @@
-<p>
-  peliculas works!
-</p>
+<br>
+<div class="tab-content">
+  <div class="row">
+    <div class="col-md-2 col-sm-6"></div>
+    <div style="width: 20rem;" class="col-md-4">
+      <div  *ngFor=" let pelicula of pelicula; let i = index">
+        <img class="card-img-top img" [src]="pelicula.imagen" alt="Card image cap">
+        <h4 class="">{{pelicula.nombre}}</h4>
+        <p style="color: blue">{{pelicula.contenido}}</p>
+        <a href="#" class="btn btn-primary">{{pelicula.calificacion}}</a>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
