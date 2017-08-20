@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-slides pager style="height: 100px">
+
+      <ion-slide style="background-color: green">
+        <h2>Home</h2>
+
+
+      </ion-slide>
+
+      <ion-slide style="background-color: blue">
+        <h2>Slide 2</h2>
+      </ion-slide>
+
+      <ion-slide style="background-color: red">
+        <h2>Slide 3</h2>
+      </ion-slide>
+
+    </ion-slides>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="card-background-page">
+  <h2>Welcome to Ionic!</h2>
+
+  <ion-card>
+    <img src="https://raw.githubusercontent.com/ionic-team/ionic-preview-app/master/src/assets/img/card-saopaolo.png"/>
+    <div class="card-title">São Paulo</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://raw.githubusercontent.com/ionic-team/ionic-preview-app/master/src/assets/img/card-amsterdam.png"/>
+    <div class="card-title">Amsterdam</div>
+    <div class="card-subtitle">64 Listings</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="img/card-sf.png"/>
+    <div class="card-title">San Francisco</div>
+    <div class="card-subtitle">72 Listings</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://raw.githubusercontent.com/ionic-team/ionic-preview-app/master/src/assets/img/card-madison.png"/>
+    <div class="card-title">Madison</div>
+    <div class="card-subtitle">28 Listings</div>
+  </ion-card>
+</ion-content>
