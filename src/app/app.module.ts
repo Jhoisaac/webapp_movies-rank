@@ -7,6 +7,8 @@ import {APP_ROUTING} from './app.routes';
 
 //servicios
 import { ActoresService } from './services/actores.service';
+import { DirectoresService } from './services/directores.service';
+import { PeliculasService } from './services/peliculas.service';
 
 // import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 //
@@ -34,7 +36,8 @@ import { PeliculasComponent } from './components/peliculas/peliculas.component';
   ],
   providers: [
     ActoresService,
-//    AuthenticationService
+    DirectoresService,
+    PeliculasService,
   ],
   bootstrap: [AppComponent]
 })

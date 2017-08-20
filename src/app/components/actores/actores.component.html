@@ -1,16 +1,13 @@
 <br>
-<div class="tab-content">
-  <div class="row">
-    <div class="col-md-2 col-sm-6"></div>
-  <div style="width: 20rem;" class="col-md-4">
-    <div  *ngFor=" let actor of actor; let i = index">
+<div class="row">
+  <div class="col-lg-4" align="center" *ngFor=" let actor of actor; let i = index">
+    <div class="card" style="width: 20rem;">
       <img class="card-img-top img" [src]="actor.imagen" alt="Card image cap">
-        <h4 class="">{{actor.nombre}}</h4>
-        <p style="color: blue">{{actor.contenido}}</p>
+      <div class="card-block">
+        <h4 class="card-title">{{actor.nombre}}</h4>
+        <p class="card-text">{{actor.contenido}}</p>
         <a href="#" class="btn btn-primary">{{actor.calificacion}}</a>
       </div>
-    <br>
     </div>
   </div>
-  </div>
-<!--</div>-->
+</div>

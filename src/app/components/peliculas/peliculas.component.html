@@ -1,15 +1,13 @@
 <br>
-<div class="tab-content">
-  <div class="row">
-    <div class="col-md-2 col-sm-6"></div>
-    <div style="width: 20rem;" class="col-md-4">
-      <div  *ngFor=" let pelicula of pelicula; let i = index">
-        <img class="card-img-top img" [src]="pelicula.imagen" alt="Card image cap">
-        <h4 class="">{{pelicula.nombre}}</h4>
-        <p style="color: blue">{{pelicula.contenido}}</p>
+<div class="row">
+  <div class="col-lg-4" align="center" *ngFor=" let pelicula of pelicula; let i = index">
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top img" [src]="pelicula.imagen" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">{{pelicula.nombre}}</h4>
+        <p class="card-text">{{pelicula.contenido}}</p>
         <a href="#" class="btn btn-primary">{{pelicula.calificacion}}</a>
       </div>
-      <br>
     </div>
   </div>
 </div>
@@ -20,10 +18,9 @@
      data-layout="button"
      data-size="large"
      data-mobile-iframe="true">
-  <a class="fb-xfbml-parse-ignore"
+  <button type="button" class="btn btn-light btn-lg active"><a class="fb-xfbml-parse-ignore"
      target="_blank"
-     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutube.com%2Fwatch?v=gOweBNPpuoM%2F&amp;src=sdkpreparse">Compartir</a></div>
-
+     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutube.com%2Fwatch?v=gOweBNPpuoM%2F&amp;src=sdkpreparse">Compartir</a></button></div>
 <!-- Video Fito&Fitipaldis -- prueba de link
 https://www.youtube.com/watch?v=gOweBNPpuoM-->
 
