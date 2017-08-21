@@ -1,0 +1,14 @@
+<br>
+<div class="row">
+  <div  align="center" *ngFor=" let comentario of comentario; let i = index">
+    <div class="card" style="width: 20rem;">
+
+      <div class="card-block">
+        <h4 class="card-title">{{comentario.titulo}}</h4>
+        <p class="card-text">{{comentario.sinopsis}}</p>
+        <p class="card-text">{{comentario.fechaLanzamiento}}</p>
+        <!--<a href="#" class="btn btn-primary">{{comentario.calificacion}}</a>-->
+      </div>
+    </div>
+  </div>
+</div>

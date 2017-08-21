@@ -5,7 +5,8 @@ import 'rxjs/RX';
 @Injectable()
 export class DirectoresService {
 
-  urlDirector: string = 'http://35.194.35.240/api';
+  urlDirector: string = 'http://api-soa-2017.mundo-libre.me/api';
+
   constructor(private http: Http) { }
 
   getDirector(indice: string) {

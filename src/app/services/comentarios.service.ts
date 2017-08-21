@@ -1,30 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Actor } from '../interfaces/actores.interface';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/RX';
-//import {AuthenticationService} from "./authentication.service";
 
 @Injectable()
-export class ActoresService {
+export class ComentariosService {
 
-  urlActor: string = 'http://api-soa-2017.mundo-libre.me/api';
+  urlComentario: string = 'http://api-soa-2017.mundo-libre.me/api';
 
   constructor(private http: Http) { }
 
-  // getActor(indice: string) {
-  //   let urls = `${this.urlActor}/${ indice}`;
-  //   return this.http.get(urls)
-  //     .map(
-  //       res => {
-  //         return res.json();
-  //       }
-  //     );
-  // }
-
-  getActor(indice: string) {
+  getComentario (indice: string) {
     // let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
     // let options = new RequestOptions({ headers: headers });
-    let urls = `${this.urlActor}/${indice}`;
+    let urls = `${this.urlComentario}/pelicula/${indice}`;
 
     return this.http.get(urls)
       .map(
@@ -35,10 +23,10 @@ export class ActoresService {
       );
   }
 
-  consultarActor() {
+  consultarComentario() {
     // let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
     // let options = new RequestOptions({ headers: headers });
-    return this.http.get(`${this.urlActor}/actores`)
+    return this.http.get(`${this.urlComentario}/peliculas`)
       .map(
         res => {
           console.log( res.json() );

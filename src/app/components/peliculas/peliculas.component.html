@@ -2,12 +2,13 @@
 <div class="row">
   <div class="col-lg-4" align="center" *ngFor=" let pelicula of pelicula; let i = index">
     <div class="card" style="width: 20rem;">
-      <img class="card-img-top img" [src]="pelicula.imagen" alt="Card image cap">
+      <img class="card-img-top img1" [src]="pelicula.imgen" alt="Card image cap">
       <div class="card-block">
-        <h4 class="card-title">{{pelicula.titulo}}</h4>
-        <p class="card-text">{{pelicula.sinopsis}}</p>
-        <p class="card-text">{{pelicula.fechaLanzamiento}}</p>
-        <a href="#" class="btn btn-primary">{{pelicula.calificacion}}</a>
+        <h4  class="card-title">{{pelicula.titulo}}</h4>
+        <!--<p class="card-text">{{pelicula.sinopsis}}</p>-->
+        <!--<p class="card-text">{{pelicula.fechaLanzamiento}}</p>-->
+        <!--<a href="#" class="btn btn-primary">{{pelicula.calificacion}}</a>-->
+        <button [routerLink]="['/comentario', pelicula.id ]" type="button" class="btn btn-outline-primary">Ver Mas</button>
       </div>
     </div>
   </div>

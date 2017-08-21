@@ -19,6 +19,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ActoresComponent } from './components/actores/actores.component';
 import { DirectoresComponent } from './components/directores/directores.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
+import { ComentarioComponent } from './components/comentario/comentario.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PeliculasComponent } from './components/peliculas/peliculas.component';
     NavbarComponent,
     ActoresComponent,
     DirectoresComponent,
-    PeliculasComponent
+    PeliculasComponent,
+    ComentarioComponent
   ],
   imports: [
     BrowserModule,

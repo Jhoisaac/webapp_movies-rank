@@ -5,8 +5,9 @@ export interface Pelicula {
   titulo: string;
   sinopsis: string;
   fechaLanzamiento: string;
-  imagen: string;
+  imgen: string;
   financiero: any;
+  id?: string;
 
   // personaje: string;
   // nacimiento: {

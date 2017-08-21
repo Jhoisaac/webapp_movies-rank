@@ -5,12 +5,14 @@ import {RouterModule, Routes} from '@angular/router';
 import { ActoresComponent } from './components/actores/actores.component';
 import { DirectoresComponent } from './components/directores/directores.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
+import { ComentarioComponent } from './components/comentario/comentario.component';
 
 const  APP_ROUTES: Routes = [
 
   {path: 'actores', component: ActoresComponent},
   {path: 'directores', component: DirectoresComponent},
   {path: 'peliculas', component: PeliculasComponent},
+  {path: 'comentario', component: ComentarioComponent},
 
   {path: '**', pathMatch: 'full', redirectTo: 'actores'}
 ];
