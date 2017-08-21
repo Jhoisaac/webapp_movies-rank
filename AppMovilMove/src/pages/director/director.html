@@ -7,13 +7,13 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>director</ion-title>
+    <ion-title>Detalles</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <ion-card>
     <img [src]="DirctInfo.imagen">
     <ion-item text-center>
@@ -29,17 +29,6 @@
           <ion-icon name="thumbs-up"></ion-icon>
           <div>{{DirctInfo.calificacion}}</div>
         </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
       </ion-col>
     </ion-row>
 

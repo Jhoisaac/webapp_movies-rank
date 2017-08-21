@@ -11,8 +11,28 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class PeliculasProvider {
 
+
+  urlPelicula: string = 'http://api-soa-2017.mundo-libre.me/api/';
   constructor(public http: Http) {
     console.log('Hello PeliculasProvider Provider');
+  }
+
+
+  getPeliculas(){
+    return this.http.get(this.urlPelicula+'peliculas').map(
+      resp=> {
+        return resp.json();
+      }
+    )
+
+  }
+  getPelicula(id:string) {
+
+    return this.http.get(this.urlPelicula+'pelicula'+id).map(
+      resp=>{
+        return resp.json();
+      }
+    );
   }
 
 }

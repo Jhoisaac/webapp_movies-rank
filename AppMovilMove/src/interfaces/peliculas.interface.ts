@@ -4,15 +4,23 @@
 export interface Pelicula {
   titulo: string;
   sinopsis: string;
+  imgen: string;
   fechaLanzamiento: string;
-  imagen: string;
-  financiero: any;
+  financiero: {
+    presupuesto: string,
+    ingresos
+  };
+  origen:{
+    idioma: string,
+    pais: any
+  };
+  popularidad:{
+    votos :number,
+    views: number
+  }
+  genero: any;
+  companias:any;
+  id:string;
+  idPeli:string;
 
-  // personaje: string;
-  // nacimiento: {
-  //   fecha: string;
-  //   lugar: string;
-  // };
-  // fechaDefuncion: string;
-  // popularidad: number;
 }

@@ -7,7 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import {HomePage,AutoresPage,DirectoresPage,PeliculasPage,AutorPage,DirectorPage} from  '../pages/pages.index';
+import {HomePage,AutoresPage,DirectoresPage,PeliculasPage,AutorPage,DirectorPage,PeliculaaPage} from  '../pages/pages.index';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ActoresProvider } from '../providers/actores/actores';
@@ -26,7 +26,8 @@ import { HttpModule } from '@angular/http';
     DirectoresPage,
     PeliculasPage,
     AutorPage ,
-    DirectorPage
+    DirectorPage,
+    PeliculaaPage
   ],
   imports: [
     HttpModule,
@@ -44,7 +45,9 @@ import { HttpModule } from '@angular/http';
     DirectoresPage,
     PeliculasPage,
     AutorPage,
-    DirectorPage
+    DirectorPage,
+    PeliculaaPage
+
   ],
   providers: [
     StatusBar,

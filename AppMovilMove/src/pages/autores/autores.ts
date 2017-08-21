@@ -32,6 +32,7 @@ export class AutoresPage {
   }
 
   getAutores(){
+
     this.presentLoading().present();
     this.Actprov.getActores().subscribe(
       resp=>{
@@ -42,6 +43,7 @@ export class AutoresPage {
       },err=>{
         this.presentLoading().dismissAll();
         this.bandera=true;
+        this.ListAutores=[];
       }
     );
   }

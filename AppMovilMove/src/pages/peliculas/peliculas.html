@@ -14,79 +14,55 @@
 
 
 <ion-content padding>
-  <ion-card>
+  <ion-fab right bottom>
+    <button ion-fab class="fab-map" color="secondary" (click)="getPelis()">
+      <ion-icon name='md-refresh'></ion-icon>
+    </button>
+  </ion-fab>
+  <div  *ngIf="ListPeliculas!=null">
+    <ion-card *ngFor="let peli of ListPeliculas">
 
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="img/marty-avatar.png">
-      </ion-avatar>
-      <h2>Marty McFly</h2>
-      <p>November 5, 1955</p>
-    </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]="peli.imgen">
+        </ion-avatar>
+        <h2>{{peli.titulo}}</h2>
+        <h3>{{peli.genero[0].name}}</h3>
+        <p>{{peli.fechaLanzamiento  | date }}</p>
+      </ion-item>
 
-    <img src="img/advance-card-bttf.png">
+      <img [src]="peli.imgen">
 
-    <ion-card-content>
-      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-    </ion-card-content>
+      <ion-card-content>
+        <p>{{peli.sinopsis}}</p>
+      </ion-card-content>
 
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-happy"></ion-icon>
+            <div>{{peli.popularidad.votos}}</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-eye"></ion-icon>
+            <div>{{peli.popularidad.views}}</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <button ion-button icon-right (click)="presentModal(peli)">
+            Comentar
+            <ion-icon name="chatboxes"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
 
-  </ion-card>
-  <ion-card>
+    </ion-card>
+  </div>
+  <div text-center *ngIf="bandera">
+    <h2>Problemas de conexion</h2>
+  </div>
 
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="img/marty-avatar.png">
-      </ion-avatar>
-      <h2>Marty McFly</h2>
-      <p>November 5, 1955</p>
-    </ion-item>
-
-    <img src="https://raw.githubusercontent.com/ionic-team/ionic-preview-app/master/src/assets/img/advance-card-bttf.png">
-
-    <ion-card-content>
-      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-    </ion-card-content>
-
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
 
 </ion-content>
