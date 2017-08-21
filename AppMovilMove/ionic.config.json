@@ -1,8 +1,13 @@
 {
   "name": "AppMovilMove",
+<<<<<<< HEAD
   "app_id": "",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
   }
+=======
+  "app_id": "366ed6be",
+  "type": "ionic-angular"
+>>>>>>> 270f93cc8c1bbabb68298cb89b2b4ffe8f6b795f
 }

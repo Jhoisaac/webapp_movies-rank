@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams,ViewController  } from 'ionic-angular';
+import { NavController, NavParams,ViewController ,ToastController  } from 'ionic-angular';
 import {Pelicula} from '../../interfaces/peliculas.interface';
+import  {Coment} from  '../../interfaces/coment.interfaces';
+import {ComentariosProvider} from '../../providers/comentarios/comentarios';
 
 /**
  * Generated class for the PeliculaaPage page.
@@ -16,8 +18,16 @@ import {Pelicula} from '../../interfaces/peliculas.interface';
 export class PeliculaaPage {
 
   PeliInfo: Pelicula;
+  ComentarioNew:Coment ={
+      usuario:"",
+      contenido:"",
+      pelicula:""
+  };
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public viewCtrl: ViewController) {
+              public viewCtrl: ViewController,
+              private comCtrl:ComentariosProvider,
+              public toastCtrl: ToastController) {
     this.PeliInfo=this.navParams.get('peli');
     console.log(this.navParams.get('peli'));
   }
@@ -27,8 +37,23 @@ export class PeliculaaPage {
   }
   cerrarModal() {
     this.viewCtrl.dismiss();
-
   }
 
+  Comentar(id:string){
+    this.ComentarioNew.pelicula=id;
+    console.log(this.ComentarioNew);
+    this.comCtrl.addComent(this.ComentarioNew).subscribe(
+      resp=>{
+        this.presentToast('Gracias por su aporte');
+      }
+    )
+  }
+  presentToast(msg:string) {
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: 3000
+    });
+    toast.present();
+  }
 
 }

@@ -1,20 +1,19 @@
 <ion-header>
   <ion-navbar>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-    <ion-slides pager style="height: 100px">
+    <ion-slides pager style="height: 85px">
 
-      <ion-slide style="background-color: green">
-        <h2>Home</h2>
+      <ion-slide style="color: green">
+        <h2>Peliculas</h2>
 
 
       </ion-slide>
 
-      <ion-slide style="background-color: blue">
-        <h2>Slide 2</h2>
+      <ion-slide style="color: blue">
+        <h2>Actores</h2>
       </ion-slide>
 
-      <ion-slide style="background-color: red">
-        <h2>Slide 3</h2>
+      <ion-slide style="color: red">
+        <h2>Directores</h2>
       </ion-slide>
 
     </ion-slides>
@@ -25,27 +24,12 @@
 <ion-content padding class="card-background-page">
   <h2>Welcome to Ionic!</h2>
 
-  <ion-card>
-    <img src="https://raw.githubusercontent.com/ionic-team/ionic-preview-app/master/src/assets/img/card-saopaolo.png"/>
-    <div class="card-title">São Paulo</div>
-    <div class="card-subtitle">41 Listings</div>
+  <ion-card *ngFor="let peli of ListPeli">
+    <img [src]="peli.imgen"/>
+    <div class="card-title">{{peli.titulo}}</div>
+    <div class="card-subtitle"> votos{{peli.popularidad.votos}}<br>
+      <button ion-button color="light" outline (click)="vermas(peli)">ver mas</button></div>
+
   </ion-card>
 
-  <ion-card>
-    <img src="https://raw.githubusercontent.com/ionic-team/ionic-preview-app/master/src/assets/img/card-amsterdam.png"/>
-    <div class="card-title">Amsterdam</div>
-    <div class="card-subtitle">64 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="img/card-sf.png"/>
-    <div class="card-title">San Francisco</div>
-    <div class="card-subtitle">72 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="https://raw.githubusercontent.com/ionic-team/ionic-preview-app/master/src/assets/img/card-madison.png"/>
-    <div class="card-title">Madison</div>
-    <div class="card-subtitle">28 Listings</div>
-  </ion-card>
 </ion-content>

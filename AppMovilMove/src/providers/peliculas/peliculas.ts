@@ -13,6 +13,7 @@ export class PeliculasProvider {
 
 
   urlPelicula: string = 'http://api-soa-2017.mundo-libre.me/api/';
+
   constructor(public http: Http) {
     console.log('Hello PeliculasProvider Provider');
   }
@@ -33,6 +34,14 @@ export class PeliculasProvider {
         return resp.json();
       }
     );
+  }
+
+  getMasvotada(){
+    return this.http.get(this.urlPelicula+'pelicula/search?q=masvisitadas&limit=5').map(
+      resp=> {
+        return resp.json();
+      }
+    )
   }
 
 }

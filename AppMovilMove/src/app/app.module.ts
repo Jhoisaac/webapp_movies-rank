@@ -14,6 +14,7 @@ import { ActoresProvider } from '../providers/actores/actores';
 import { DirectoresProvider } from '../providers/directores/directores';
 import { PeliculasProvider } from '../providers/peliculas/peliculas';
 import { HttpModule } from '@angular/http';
+import { ComentariosProvider } from '../providers/comentarios/comentarios';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { HttpModule } from '@angular/http';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ActoresProvider,
     DirectoresProvider,
-    PeliculasProvider
+    PeliculasProvider,
+    ComentariosProvider
   ]
 })
 export class AppModule {}
