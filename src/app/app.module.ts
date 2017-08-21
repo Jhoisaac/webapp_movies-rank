@@ -9,6 +9,7 @@ import {APP_ROUTING} from './app.routes';
 import { ActoresService } from './services/actores.service';
 import { DirectoresService } from './services/directores.service';
 import { PeliculasService } from './services/peliculas.service';
+import { ComentariosService } from './services/comentarios.service';
 
 // import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 //
@@ -20,6 +21,8 @@ import { ActoresComponent } from './components/actores/actores.component';
 import { DirectoresComponent } from './components/directores/directores.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { ComentarioComponent } from './components/comentario/comentario.component';
+import { HomeComponent } from './components/home/home.component';
+import { BuscarComponent } from './components/buscar/buscar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { ComentarioComponent } from './components/comentario/comentario.componen
     ActoresComponent,
     DirectoresComponent,
     PeliculasComponent,
-    ComentarioComponent
+    ComentarioComponent,
+    HomeComponent,
+    BuscarComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +45,7 @@ import { ComentarioComponent } from './components/comentario/comentario.componen
     ActoresService,
     DirectoresService,
     PeliculasService,
+    ComentariosService,
   ],
   bootstrap: [AppComponent]
 })

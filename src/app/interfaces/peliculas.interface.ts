@@ -6,14 +6,7 @@ export interface Pelicula {
   sinopsis: string;
   fechaLanzamiento: string;
   imgen: string;
-  financiero: any;
+  financiero: number;
   id?: string;
 
-  // personaje: string;
-  // nacimiento: {
-  //   fecha: string;
-  //   lugar: string;
-  // };
-  // fechaDefuncion: string;
-  // popularidad: number;
 }

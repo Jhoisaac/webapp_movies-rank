@@ -8,7 +8,7 @@ import 'rxjs/RX';
 export class ActoresService {
 
   urlActor: string = 'http://api-soa-2017.mundo-libre.me/api';
-
+  actor: Actor[] = [];
   constructor(private http: Http) { }
 
   // getActor(indice: string) {
@@ -19,6 +19,18 @@ export class ActoresService {
   //         return res.json();
   //       }
   //     );
+  // }
+
+  // buscarActor(termino: string): Actor[] {
+  //   const actorArr: Actor[] = [];
+  //   termino = termino.toLowerCase();
+  //   for (const actor of this.actor){
+  //     const nombre = actor.nombre.toLowerCase();
+  //     if (nombre.indexOf(termino) >= 0) {
+  //       actorArr.push(actor);
+  //     }
+  //   }
+  //   return actorArr;
   // }
 
   getActor(indice: string) {

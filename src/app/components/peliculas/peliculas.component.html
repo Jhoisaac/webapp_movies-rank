@@ -5,10 +5,11 @@
       <img class="card-img-top img1" [src]="pelicula.imgen" alt="Card image cap">
       <div class="card-block">
         <h4  class="card-title">{{pelicula.titulo}}</h4>
-        <!--<p class="card-text">{{pelicula.sinopsis}}</p>-->
-        <!--<p class="card-text">{{pelicula.fechaLanzamiento}}</p>-->
-        <!--<a href="#" class="btn btn-primary">{{pelicula.calificacion}}</a>-->
-        <button [routerLink]="['/comentario', pelicula.id ]" type="button" class="btn btn-outline-primary">Ver Mas</button>
+        <p class="card-text">{{pelicula.sinopsis}}</p>
+        <p class="card-text">{{pelicula.fechaLanzamiento}}</p>
+        <!--<p class="card-text">{{pelicula.financiero}}</p>-->
+        <!--<a href="#" class="btn btn-primary">{{pelicula.financiero}}</a>-->
+        <!--<button (click)="verApi(pelicula.id)" type="button" class="btn btn-outline-primary">Ver Mas</button>-->
       </div>
 
 

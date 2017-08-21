@@ -12,7 +12,7 @@ export class ComentariosService {
   getComentario (indice: string) {
     // let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
     // let options = new RequestOptions({ headers: headers });
-    let urls = `${this.urlComentario}/pelicula/${indice}`;
+    let urls = `${this.urlComentario}/${indice}`;
 
     return this.http.get(urls)
       .map(
@@ -26,7 +26,7 @@ export class ComentariosService {
   consultarComentario() {
     // let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
     // let options = new RequestOptions({ headers: headers });
-    return this.http.get(`${this.urlComentario}/peliculas`)
+    return this.http.get(`${this.urlComentario}/comentarios`)
       .map(
         res => {
           console.log( res.json() );
