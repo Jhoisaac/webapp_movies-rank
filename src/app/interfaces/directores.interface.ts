@@ -7,11 +7,4 @@ export interface Director {
   contenido: string;
   imagen: string;
   calificacion: string;
-  // personaje: string;
-  // nacimiento: {
-  //   fecha: string;
-  //   lugar: string;
-  // };
-  // fechaDefuncion: string;
-  // popularidad: number;
 }

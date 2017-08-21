@@ -6,7 +6,6 @@ import 'rxjs/RX';
 export class DirectoresService {
 
   urlDirector: string = 'http://35.194.35.240/api';
-
   constructor(private http: Http) { }
 
   getDirector(indice: string) {

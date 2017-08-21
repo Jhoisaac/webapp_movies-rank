@@ -8,13 +8,13 @@ import { DirectoresService } from '../../services/directores.service';
   styles: []
 })
 export class DirectoresComponent implements OnInit {
-  actor: Director[] = [];
+  director: Director[] = [];
   constructor(private directorService: DirectoresService) {
 
     this.directorService.consultarDirector()
       .subscribe(
         resultado => {
-          this.actor = resultado;
+          this.director = resultado;
           console.log(resultado);
         }
       );
