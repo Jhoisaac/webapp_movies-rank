@@ -74,28 +74,27 @@
         <li *ngFor="let compania of  PeliInfo.companias " >{{compania.name}}</li>
       </ul>
     </ion-item>
+  </ion-card>
+  <br>
+  <br>
+  <ion-card>
+    <ion-card-header>
+      Agrega tu comentario
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label color="primary">Usuario</ion-label>
+          <ion-input [(ngModel)]="ComentarioNew.usuario" placeholder="Usuario"></ion-input>
+        </ion-item>
 
-
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
-      </ion-col>
-    </ion-row>
-
+        <ion-item>
+          <ion-label color="primary" fixed>Comentario</ion-label>
+          <ion-textarea [(ngModel)]="ComentarioNew.contenido"></ion-textarea>
+        </ion-item>
+      </ion-list>
+      <button ion-button large (click)="Comentar(PeliInfo.id)">Comentar</button>
+    </ion-card-content>
   </ion-card>
 
 
