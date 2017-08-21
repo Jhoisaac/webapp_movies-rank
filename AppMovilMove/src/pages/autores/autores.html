@@ -14,14 +14,22 @@
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
+  <ion-fab right bottom>
+    <button ion-fab class="fab-map" color="secondary" (click)="getAutores()">
+      <ion-icon name='md-refresh'></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-list *ngIf="ListAutores!=null" >
+    <ion-item *ngFor="let aut of ListAutores">
       <ion-thumbnail item-start>
-        <img src="https://raw.githubusercontent.com/ionic-team/ionic-preview-app/master/src/assets/img/thumbnail-bttf.png">
+        <img [src]="aut.imagen">
       </ion-thumbnail>
-      <h2>My Neighbor Totoro</h2>
-      <p>Hayao Miyazaki • 1988</p>
-      <button ion-button clear item-end>View</button>
+      <h2>{{aut.nombre}}</h2>
+      <p>{{aut.calificacion}}</p>
+      <button ion-button clear item-end  (click)="presentPopover(aut)"> <ion-icon name="list"></ion-icon></button>
     </ion-item>
   </ion-list>
+  <div text-center *ngIf="bandera">
+    <h2>Problemas de conexion</h2>
+  </div>
 </ion-content>

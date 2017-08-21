@@ -7,9 +7,13 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import {HomePage,AutoresPage,DirectoresPage,PeliculasPage} from  '../pages/pages.index';
+import {HomePage,AutoresPage,DirectoresPage,PeliculasPage,AutorPage,DirectorPage} from  '../pages/pages.index';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ActoresProvider } from '../providers/actores/actores';
+import { DirectoresProvider } from '../providers/directores/directores';
+import { PeliculasProvider } from '../providers/peliculas/peliculas';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     AutoresPage ,
     DirectoresPage,
-    PeliculasPage
+    PeliculasPage,
+    AutorPage ,
+    DirectorPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -35,12 +42,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage ,
     AutoresPage ,
     DirectoresPage,
-    PeliculasPage
+    PeliculasPage,
+    AutorPage,
+    DirectorPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ActoresProvider,
+    DirectoresProvider,
+    PeliculasProvider
   ]
 })
 export class AppModule {}
